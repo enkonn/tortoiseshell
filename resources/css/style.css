@@ -1,0 +1,249 @@
+/*footer *{
+  border: 1px solid red;
+}
+*/  /* test borders of any tag. */
+
+html{
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: Helvetica;
+  margin: 0 auto;
+}
+/* Display properties*/
+.flex{
+  display: flex;
+}
+.header-flex-rules{
+  align-content: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.content-flex-rules{
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.inline-block{
+  display: inline-block;
+}
+.block{
+  display: block;
+}
+/* Mobile First */
+.mobile{
+  display: initial;
+}
+.desktop-tab{
+  display: none;
+}
+/*Content Properties*/
+.width-set{
+  width: 100%;
+}
+a{
+  color:inherit;
+  text-decoration: none;
+}
+p{
+  font-size: 0.77rem;
+}
+.major-background{
+  background-image: url("../images/glasses-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20%;
+  height: 17rem;
+  width: auto;
+  justify-content: flex-end;
+}
+  header{
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+    width: 100%;
+    height: 3rem;
+  }
+    .logo{
+      align-items: center;
+    }
+      .logo img{
+        height: 1.5rem;
+        width: auto;
+        padding: 0 1rem 0 2rem;
+      }
+    nav li{
+      display: inline-block;
+      color: inherit;
+      padding: 1rem 2rem 1rem 0;
+    }
+.statement-box{
+  background-color: white;
+  position: relative;
+  top: 9rem;
+  height: 3rem;
+  width: 100%;
+}
+  .statement-box h1{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    padding: 1rem;
+  }
+.store-features{
+  margin-top: 3.77rem;
+}
+  .feature{
+    width: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.54rem;
+  }
+    .feature img{
+      max-width: 5rem;
+      max-height: 4.21rem ; /* So portrait objects limit to 3.5rem width*/
+      padding-bottom: 1.5rem;
+    }
+    .feature p{
+      text-align: center;
+    }
+.information{
+  margin-top: 3.77rem;
+}
+  .info-box{
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+    .info-box h4{
+      background-color: cadetblue;
+      color: white;
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    .info-box p{
+      padding: 0 5%;
+    }
+footer{
+  background-color: azure;
+  justify-content: center;
+}
+  footer img{
+    height: 1.5rem;
+    width: auto;
+    padding: 4rem 1rem 4rem 4rem;
+  }
+
+@media only screen and (min-width:685px){
+  /*Rules changed:
+    1 Add Tortoiseshell optics text in header and footer
+    2 Menu type
+    3 Background dimensions
+    4 Statement box dimensions
+    5 Store feats flex direction and feature dimensions
+    6 font-size for paragraph.
+    7 information box/container
+        7.1 Header background dimension
+        7.2 Box dimension
+        7.3 Flex direction of information container
+    8 Place footer left with all extras
+  */
+  p{
+    font-size: 1rem;
+  }
+  .width-set{
+    width: auto;
+  }
+  .desktop-tab{
+    display: initial;
+  }
+  .mobile{
+    display: none;
+  }
+  .content-flex-rules{
+    flex-direction: row;
+  }
+  .major-background{
+    background-position: left;
+    height: 22rem;
+  }
+  .statement-box{
+    position: relative;
+    top: 5rem;
+    right: 2rem;
+    width: auto;
+  }
+    .statement-box h1{
+      font-size: 1.33rem;
+      padding: 0.75rem 4rem;
+    }
+    .store-features{
+      margin-top: 3rem;
+    }
+  .information{
+    margin-top: 3rem;
+  }
+    .information.flex{
+      align-items: flex-start;
+    }
+    .info-box{
+      width: 35%;
+    }
+      .info-box h4{
+        width: 10rem;
+        padding-left: 1.25rem;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      .info-box p{
+        padding: 0;
+      }
+  footer{
+    justify-content: flex-start;
+  }
+    footer img{
+      height: 1.5rem;
+      width: auto;
+    }
+    footer p{
+      padding: 4rem 0;
+    }
+}
+
+@media only screen and (min-width:1024px){
+  /*
+  Rules Changed
+  1 set .width-set to 960px
+  2 Background dimensions
+  3 Statement box and content dimensions
+  */
+  header{
+    margin-top: 1rem;
+  }
+  .width-set{
+    width: 960px;
+    margin: 0 auto;
+  }
+  .major-background{
+    height: 30rem;
+  }
+  .statement-box{
+    position: relative;
+    top: 10rem;
+    left: 2rem;
+    height: 5.4rem;
+  }
+    .statement-box h1{
+      font-size: 2rem;
+      padding: 1.5rem 5rem;
+    }
+  .store-features{
+    margin-top: 3rem;
+  }
+  .information{
+    margin-top: 3rem;
+  }
+}
